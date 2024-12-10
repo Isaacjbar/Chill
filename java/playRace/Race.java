@@ -20,17 +20,35 @@ public class Race {
             {"|", "_", "_", "/", " ","\\", "_", "_", "_", "_", "_", "_", "/", " ","\\", "_", "_", "_", "_", "_", "|"},
             {" ", " ", " ","\\", "_", "/", " ", " ", " ", " ", " ", " ","\\", "_", "/", " ", " ", " ", " ", " ", " "}
         };
-        
-        printBus(bus, car, 120,"","");
+        printBus(bus, car,"","");
     }
 
-    public static void printBus(String[][] bus, String[][] car, int meta, String distanceO, String distanceS) throws InterruptedException {
-        if(meta==0){
+    public static void printBus(String[][] bus, String[][] car, String distanceO, String distanceS) throws InterruptedException {
+        if(distanceO.length()>=102 && distanceS.length()>=102){
+            System.out.println("Empate");
             return;
         }
-        if(distanceO.length() == 40 || distanceS.length() == 40){
+        if(distanceS.length() >= 102){
+            System.out.println(distanceS.length()>=102?"Gano Monster :), "+distanceS.length():"");
             return;
         }
+        if(distanceO.length() >= 102){
+            System.out.println(distanceO.length()>=102?"Gano Redbull :v, "+distanceO.length():"");
+            return;
+        }
+
+        Thread.sleep(70);
+        System.out.print("\033[H\033[2J");
+
+        int rmO = (int)(Math. random()*8+1);
+        for (int i = 0; i < rmO; i++) {
+            distanceO +=" ";
+        }
+        int rmS = (int)(Math. random()*8+1);
+        for (int i = 0; i < rmS; i++) {
+            distanceS +=" ";
+        }
+
         for (int i = 0; i < bus.length; i++) {
             System.out.print(distanceO);
             for (int j = 0; j < 21; j++) {
@@ -48,10 +66,8 @@ public class Race {
             }
             System.out.println("");
         }
-        
-        Thread.sleep(100);
-        System.out.print("\033[H\033[2J");
-        printBus(bus, car, meta-1, distanceO+=" ", distanceS+="   ");
+    
+        printBus(bus, car, distanceO+=" ", distanceS+=" ");
     }
 
 }
