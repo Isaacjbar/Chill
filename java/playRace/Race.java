@@ -8,40 +8,50 @@ public class Race {
             {" ", " ", " ", " ", " ", " ", " ", " ", "_", "_", "_", "_", "_", "_", "_", " ", " ", " ", " ", " ", " "},
             {" ", " ", " ", " ", " ", " ", " ", "/", " ", "/","||", " ", " ","\\","\\", " ", " ", " ", " ", " ", " "},
             {" ", " ", "_", "_", "_", "_", "/", " ", "/", "_","||", "_", "_", "_","\\","\\", "_", "_", "_", "_", " "},
-            {" ", "/", " ", " ", "_", " ", " ", " ", " ", " ", " ", " ", " ", "_", " ", " ", " ", " ", " ", " ", "("},
+            {" ", "/", " ", " ", "_", " ", "REDBULL", "_", " ", " ", " ", " ", " ", " ", "("," ", " "," ", " "," "," ",},
             {"|", "_", "_", "/", " ","\\", "_", "_", "_", "_", "_", "_", "/", " ","\\", "_", "_", "_", "_", "_", "|"},
             {" ", " ", " ","\\", "_", "/", " ", " ", " ", " ", " ", " ","\\", "_", "/", " ", " ", " ", " ", " ", " "}
         };
-        System.out.println(bus.length);
+        String[][] car = {
+            {" ", " ", " ", " ", " ", " ", " ", " ", "_", "_", "_", "_", "_", "_", "_", " ", " ", " ", " ", " ", " "},
+            {" ", " ", " ", " ", " ", " ", " ", "/", " ", "/","||", " ", " ","\\","\\", " ", " ", " ", " ", " ", " "},
+            {" ", " ", "_", "_", "_", "_", "/", " ", "/", "_","||", "_", "_", "_","\\","\\", "_", "_", "_", "_", " "},
+            {" ", "/", " ", " ", "_", "MONSTER", " ","_", " ", " ", " ", " ", " ", " ", "("," ", " ", " ", " "," "," ",},
+            {"|", "_", "_", "/", " ","\\", "_", "_", "_", "_", "_", "_", "/", " ","\\", "_", "_", "_", "_", "_", "|"},
+            {" ", " ", " ","\\", "_", "/", " ", " ", " ", " ", " ", " ","\\", "_", "/", " ", " ", " ", " ", " ", " "}
+        };
         
-        printBus(bus,20);
-        /*Animación del autobús
-        for (int i = 0; i < 20; i++) { // El número de iteraciones controla cuánto se mueve
-            imprimirAutobus(autobus);
-            moverAutobus(autobus); // Añade espacio al inicio para mover
-            Thread.sleep(300); // Pausa de 300 ms entre cada movimiento
-            System.out.println("\n\n\n\n\n\n"); // Limpia la pantalla entre movimientos
-        } */
+        printBus(bus, car, 120,"","");
     }
 
-    public static void printBus(String[][] bus, int meta) throws InterruptedException {
-        String distance = " ";
+    public static void printBus(String[][] bus, String[][] car, int meta, String distanceO, String distanceS) throws InterruptedException {
         if(meta==0){
             return;
         }
+        if(distanceO.length() == 40 || distanceS.length() == 40){
+            return;
+        }
         for (int i = 0; i < bus.length; i++) {
-            //System.out.print(distance);
+            System.out.print(distanceO);
             for (int j = 0; j < 21; j++) {
                 System.out.print(bus[i][j]);
             }
             System.out.println("");
-            distance+=" ";
         }
 
-        Thread.sleep(300); // Pausa de 300 ms
-        System.out.println("\n\n\n\n\n\n");
-        printBus(bus, meta-1);
+        System.out.println("");
+        
+        for (int i = 0; i < car.length; i++) {
+            System.out.print(distanceS);
+            for (int j = 0; j < 21; j++) {
+                System.out.print(car[i][j]);
+            }
+            System.out.println("");
+        }
+        
+        Thread.sleep(100);
+        System.out.print("\033[H\033[2J");
+        printBus(bus, car, meta-1, distanceO+=" ", distanceS+="   ");
     }
-
 
 }
