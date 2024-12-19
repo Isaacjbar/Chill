@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Tema oscuro -->
+    <style name="Theme.Music.Dark" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Colores primarios -->
+        <item name="colorPrimary">@color/spotify_green</item>
+        <item name="colorPrimaryVariant">@color/spotify_dark_gray</item>
+        <item name="colorOnPrimary">@color/spotify_white</item>
+
+        <!-- Colores secundarios -->
+        <item name="colorSecondary">@color/spotify_light_gray</item>
+        <item name="colorSecondaryVariant">@color/spotify_light_gray</item>
+        <item name="colorOnSecondary">@color/spotify_white</item>
+
+        <!-- Fondo de la aplicación -->
+        <item name="android:colorBackground">@color/spotify_black</item>
+
+        <!-- Color de texto y elementos en el fondo -->
+        <item name="android:textColorPrimary">@color/spotify_white</item>
+        <item name="android:textColorSecondary">@color/spotify_light_gray</item>
+
+        <!-- Barra de estado -->
+        <item name="android:statusBarColor">@color/spotify_black</item>
+    </style>
+</resources>

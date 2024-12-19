@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorPrimary">#5FA0D9</color>
+    <color name="colorPrimaryVariant">#9BE2F2</color>
+    <color name="colorAccent">#5DA662</color>
+    <color name="colorBackground">#FFFFFFFF</color>
+    <color name="colorSecondary">#F2E963</color>
+    <color name="colorOnPrimary">#F2D57E</color>
+
+    <color name="spotify_green">#1DB954</color> <!-- Verde de Spotify -->
+    <color name="spotify_black">#191414</color> <!-- Negro de Spotify -->
+    <color name="spotify_white">#FFFFFF</color> <!-- Blanco -->
+    <color name="spotify_dark_gray">#121212</color> <!-- Gris oscuro utilizado en la interfaz de Spotify -->
+    <color name="spotify_light_gray">#B3B3B3</color> <!-- Gris claro para texto secundario -->
+
+</resources>

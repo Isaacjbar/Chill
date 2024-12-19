@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"> <!-- Centra el contenido -->
+
+    <!-- Botón para reproducir la nota -->
+    <Button
+        android:id="@+id/btnPlayNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reproducir nota"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="24dp"
+        android:padding="16dp"
+        android:textColor="@color/spotify_white"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:background="@drawable/rounded_button"
+        android:gravity="center" />
+
+    <!-- Contenedor de opciones -->
+    <GridLayout
+        android:id="@+id/noteOptionsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="3"
+        android:layout_marginTop="16dp"
+        android:padding="8dp" />
+</LinearLayout>
