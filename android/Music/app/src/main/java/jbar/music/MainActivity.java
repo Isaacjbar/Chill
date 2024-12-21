@@ -72,7 +72,8 @@ public class MainActivity extends AppCompatActivity {
         for (int i = 0; i < 4; i++) {
             String note = (i == correctNoteIndex) ? correctNote : shuffledNotes[i];
             Button noteButton = new Button(this);
-            noteButton.setText(note.toUpperCase());
+            noteButton.setText(note); // Texto tal cual
+            noteButton.setAllCaps(false); // Desactiva la transformación a mayúsculas
             noteButton.setTextColor(getResources().getColor(R.color.spotify_white));
             noteButton.setTextSize(16);
             noteButton.setPadding(16, 16, 16, 16);

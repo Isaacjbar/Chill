@@ -12,4 +12,6 @@
     android:textStyle="bold"
     android:background="@drawable/rounded_button"
     android:contentDescription="Botón de opción de nota musical"
-    android:gravity="center" />
+    android:gravity="center"
+    />
+

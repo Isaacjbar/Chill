@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <!-- Título de la escala -->
+    <TextView
+        android:id="@+id/tvScaleTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Escala"
+        android:textSize="20sp"
+        android:textColor="@color/spotify_white"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Contenedor para los espacios -->
+    <LinearLayout
+        android:id="@+id/llSpacesContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Contenedor para las opciones -->
+    <GridLayout
+        android:id="@+id/glOptionsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:layout_marginBottom="24dp"
+        android:padding="8dp" />
+
+    <!-- Botón para reproducir la nota -->
+    <Button
+        android:id="@+id/btnPlayNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reproducir Nota"
+        android:textColor="@color/spotify_white"
+        android:background="@drawable/rounded_button"
+        android:padding="12dp"
+        android:textAllCaps="false"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Botón para avanzar a la siguiente nota -->
+    <Button
+        android:id="@+id/btnNextNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Siguiente Nota"
+        android:textColor="@color/spotify_white"
+        android:background="@drawable/rounded_button"
+        android:padding="12dp"
+        android:textAllCaps="false"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Botón para pasar a otra escala -->
+    <Button
+        android:id="@+id/btnNextScale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pasar a Otra Escala"
+        android:textColor="@color/spotify_white"
+        android:background="@drawable/rounded_button"
+        android:padding="12dp"
+        android:textAllCaps="false"
+        android:visibility="gone"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>

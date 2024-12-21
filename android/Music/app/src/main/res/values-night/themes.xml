@@ -20,5 +20,13 @@
 
         <!-- Barra de estado -->
         <item name="android:statusBarColor">@color/spotify_black</item>
+
+        <!-- Sobrescribir widget del botón -->
+        <item name="buttonStyle">@style/CustomButtonStyle</item>
+    </style>
+
+    <!-- Estilo personalizado para botones -->
+    <style name="CustomButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="textAllCaps">false</item>
     </style>
 </resources>

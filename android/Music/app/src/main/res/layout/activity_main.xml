@@ -20,7 +20,8 @@
         android:textStyle="bold"
         android:textSize="16dp"
         android:background="@drawable/rounded_button"
-        android:gravity="center" />
+        android:gravity="center"
+        android:textAllCaps="false"/>
 
     <!-- Contenedor de opciones -->
     <GridLayout
