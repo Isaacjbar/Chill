@@ -1,0 +1,30 @@
+export const Notes = [
+    {
+        id:1,
+        note:"C"
+    },
+    {
+        id:2,
+        note:"D"
+    },
+    {
+        id:3,
+        note:"E"
+    },
+    {
+        id:4,
+        note:"F"
+    },
+    {
+        id:5,
+        note:"G"
+    },
+    {
+        id:6,
+        note:"A"
+    },
+    {
+        id:7,
+        note:"B"
+    }
+]
